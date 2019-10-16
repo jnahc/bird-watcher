@@ -1,89 +1,49 @@
 console.log(`yup`)
 
-const $form = $(`form`);
-
-let $email = $(`#exampleInputEmail1`).val();
-let $dropdown = $(`#exampleFormControlSelect1`).val();
-let $password = $(`exampleInputPassword1`).val();
-let $textform = $(`exampleFormControlTextarea1`).val();
-let $event1 = $(`#event1`);
-let $event2 = $(`#event2`);
-let $event3 = $(`#event3`);
-let $event4 = $(`#event4`);
-let eventsArr = [];
-
-$event1.click(function(event){
-  console.log(`1 pressed`);
-  eventsArr.push("event1");
-  console.log(eventsArr)
-})
-$event2.click(function(event){
-  console.log(`2 pressed`);
-  eventsArr.push("event2");
-  console.log(eventsArr)
-})
-$event3.click(function(event){
-  console.log(`3 pressed`);
-  eventsArr.push("event3");
-  console.log(eventsArr)
-})
-$event4.click(function(event){
-  console.log(`4 pressed`);
-  console.log(eventsArr)
-  eventsArr.push("event4");
-})
-
-let data = `{
-  "email":"${$email}",
-  "dropdown":"${$dropdown}",
-  "password":"${$password}",
-  "textform":"${$textform}",
-  "events":"${eventsArr}"
-}`
-
-
+let $form = $(`form`);
 
 $form.submit(function(event){
   event.preventDefault();
   console.log(`submitted`)
   apiUrl = `http://localhost:4000/api/v1/subscribers`
 
-  // let $email = $(`#exampleInputEmail1`).val();
-  // let $dropdown = $(`#exampleFormControlSelect1`).val();
-  // let $password = $(`#exampleInputPassword1`).val();
-  // let $textform = $(`#exampleFormControlTextarea1`).val();
+  let $firstName = $(`#first-name`).val();
+  let $lastName = $(`#last-name`).val();
+  let $email = $(`#email`).val();
+  let $frequency = $(`#frequency`).val();
+  let $socialEvent = $(`#social-event`).is(`:checked`);
+  let $academicEvent = $(`#academic-event`).is(`:checked`)
+  let $outingsEvent = $(`#outings-event`).is(`:checked`)
+  let $pacificNorthwest = $(`#pacific-northwest`).is(`:checked`)
+  let $californiaSoutwest = $(`#california-southwest`).is(`:checked`)
+  let $midwest = $(`#midwest`).is(`:checked`)
+  let $newEngland = $(`#new-england`).is(`:checked`)
+  let $atlanticCoast = $(`#atlantic-coast`).is(`:checked`)
 
-  // let testData = `{
-  // "firstName":"${$email}",
-  // "lastName":"${$dropdown}",
-  // "email":"${$password}",
-  // "region":"${$textform}"
-  // "events":"${eventsArr}"
-  // }`
-
-  let testData = `{
-    "firstName":"test",
-    "lastName":"data",
-    "email":"test@test.com",
-    "region":["region"],
-    "events":["event"],
-    "frequency":"yup"
-    }`
-
-console.log (testData)
+  let subscriberData = {
+    "firstName": `${$firstName}`,
+    "lastName": `${$lastName}`,
+    "email": `${$email}`,
+    "pNWRegion":`${$pacificNorthwest}`,
+    "cSWRegion":`${$californiaSoutwest}`,
+    "mWRegion":`${$midwest}`,
+    "nERegion":`${$newEngland}`,
+    "aCRegion":`${$atlanticCoast}`,
+    "frequency":`${$frequency}`,
+    "socialEvent":`${$socialEvent}`,
+    "academicEvent":`${$academicEvent}`,
+    "outingsEvent":`${$outingsEvent}`
+  }
+ 
   
+  console.log(subscriberData);
+  // console.log($socialEvent)
+
   $.ajax({
     method: `POST`,
     url: `${apiUrl}`,
-    data: {
-      "firstName":"testkjehfkjshefk",
-      "lastName":"data",
-      "email":"test@test.com",
-      "region":["region"],
-      "events":["event"],
-      "frequency":"yup"
-      },
-    success: console.log(`success`),
+    data: subscriberData,
+    success: console.log(`db entry success`),
     error: (error) => {
       console.log({error});
     }

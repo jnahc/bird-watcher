@@ -18,44 +18,90 @@
   <div class="container">
     <div class="col-md-8 order-md-1">
         <form>
+            <!-- NAME -->
+            <div class="form-group">
+                <label for="exampleFormControlTextarea1">First Name</label>
+                <textarea class="form-control" id="first-name" rows="1"></textarea>
+              </div>
+              <div class="form-group">
+                  <label for="exampleFormControlTextarea1">Last Name</label>
+                  <textarea class="form-control" id="last-name" rows="1"></textarea>
+                </div>
+            <!-- EMAIL -->
             <div class="form-group">
               <label for="exampleInputEmail1">Email address</label>
-              <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+              <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email">
               <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
             </div>
+            <!-- FREQUENCY -->
             <div class="form-group">
-              <label for="exampleInputPassword1">Password</label>
-              <input name="password" type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+              <label for="exampleFormControlSelect1">frequency</label>
+              <select class="form-control" id="frequency">
+                <option>Monthly</option>
+                <option>Weekly</option>
+                <option>Daily</option>
+              </select>
             </div>
-            <div class="form-group form-check">
-              <input name="checkbox" type="checkbox" class="form-check-input" id="exampleCheck1">
-              <label class="form-check-label" for="exampleCheck1">Check me out</label>
+            <!-- EVENTS -->
+            <div class="form-group">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="social-event">
+                  <label class="form-check-label" for="defaultCheck1">
+                    Social Event
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="academic-event">
+                  <label class="form-check-label" for="defaultCheck1">
+                    Academic Event
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="outings-event">
+                  <label class="form-check-label" for="defaultCheck1">
+                    Outings
+                  </label>
+                </div>
             </div>
-          
-              <div class="form-group">
-                <label for="exampleFormControlSelect1">Example select</label>
-                <select class="form-control" id="exampleFormControlSelect1">
-                  <option>1</option>
-                  <option>2</option>
-                  <option>3</option>
-                  <option>4</option>
-                  <option>5</option>
-                </select>
-              </div>
-              <div class="form-group">
-                <label for="exampleFormControlTextarea1">Example textarea</label>
-                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-              </div>
-             
-              <button type="submit" class="btn btn-primary">Submit</button>
-          </form>
+            <!-- LOCATIONS -->
+            <div class="form-group">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="pacific-northwest">
+                    <label class="form-check-label" for="defaultCheck1">
+                      PNW
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="california-southwest">
+                    <label class="form-check-label" for="defaultCheck1">
+                      CSW
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="midwest">
+                    <label class="form-check-label" for="defaultCheck1">
+                      MW
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="new-england">
+                    <label class="form-check-label" for="defaultCheck1">
+                      NE
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="atlantic-coast">
+                    <label class="form-check-label" for="defaultCheck1">
+                      AC
+                    </label>
+                  </div>
+            </div>       
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
     </div>
   </div>
 
-  <div id="event1">1</div>
-  <div id="event2">2</div>
-  <div id="event3">3</div>
-  <div id="event4">4</div>
+
   
   <script
   src="https://code.jquery.com/jquery-3.4.1.min.js"
