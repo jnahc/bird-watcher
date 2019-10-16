@@ -1,12 +1,83 @@
 /*-------------------------------HOME PAGE--------------------------*/
 img {
-  width: 500px;
-  height: 200px;
+  /* position: absolute; */
+ top: 50%;
+ /* left: 50%; */
+ width: 100%;
+ height: auto;
+ margin-top: -250px; /* Half the height */
+ /* margin-left: -250px; /* Half the width */
+} */
+
+.responsive {
+  width: 100%;
+  height: auto;
+}
+
+.searchbox {
+  width: 300px;
+  height: 70px;
+  margin: 0 auto;  
 }
 
 body {
   background-color: white;
+  margin: 0 auto;
 }
+
+.regions-title {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  letter-spacing: -0.63px;
+  color: #000000;
+
+}
+
+
+.pnw-div, .csw-div, .a-div, .m-div, .ne-div{
+  height: 140px;
+  /* background-size: cover; */
+  position: relative;
+  margin: 20px 0 0 0;
+  border-radius: 12px;
+  /* background: #607D89;  */
+  margin: 5px; 
+  overflow: hidden;
+  vertical-align: middle;
+  max-width: 70%;
+  }
+
+
+
+.p-div {
+  color: rgba(255,255,255,1);
+  /* background: #607D89; */
+  /* background: linear-gradient(bottom, rgba(96,125,137,1), rgba(96,125,137,.4)); */
+  padding: 5px;
+  /* line-height: 28px; */
+  text-align: justify;
+  position: absolute;
+  bottom: 1px;
+  margin: 1px;
+  height: 30px;
+  transition: height .5s;
+  }
+
+.h1-div {
+  font-family: 'Blinker', sans-serif;
+  text-align: center;
+  font-size: 75px;
+  color: #aaaaaa;
+  margin: 60px 0 0 0;
+  }
+
+.h2-div {
+  text-align: center;
+  color: #bbbbbb;
+  margin: 0px 0 70px 0;
+  }
+  
 
 /*------------------------------- NAVBAR -------------------------*/
 /* General Settings */
@@ -105,17 +176,7 @@ border-radius: 9px;
 margin: 5px 18px;
 }
 
-/* Regions Section Title */
-.regions-title {
-  margin-top: 20px auto;
-  font-family: 'Roboto', sans-serif;
-  font-size: 14px;
-  letter-spacing: -.63%;
-  border: solid 18px #E0E8EC;
-  line-height: 16px;
-  text-align: left;
-  padding: 5px;
-}
+
 
 /* Regions */
 .regions-list {
@@ -132,16 +193,28 @@ margin: 5px 18px;
 }     
 
 /* Regions Checkboxes */
-#pnw, #csw, #ne, #m, #a{
+#pacific-northwest-region, #california-southwest-region, #new-england-region, #midwest-region, #atlantic-region, #academic-events, #outings-events, #social-events {
   float: right;
-  margin-right: 10px;
+  margin-right: 50px;
+  
 }
 
 .regionsection {
   padding: 5px;
 }
 
-
+input[type=checkbox]
+{
+  /* Double-sized Checkboxes */
+  -ms-transform: scale(1.3); /* IE */
+  -moz-transform: scale(1.3); /* FF */
+  -webkit-transform: scale(1.3); /* Safari and Chrome */
+  -o-transform: scale(1.3); /* Opera */
+  padding: 5px;
+  
+  /* credits https://stackoverflow.com/questions/22743457/how-can-i-change-the-size-of-a-bootstrap-checkbox */
+}
+  
 /* ------------------------------CONFIRMATION MODAL-------------------------------- */
 .conf-larg {
   font-family: 'Roboto', sans-serif;
@@ -156,4 +229,6 @@ margin: 5px 18px;
   letter-spacing: -.63%;
   border: solid 18px #E0E8EC;
   line-height: 1.4em;
+  background: #E0E8EC;
+  text-align: center;
 }

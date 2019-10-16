@@ -9,10 +9,10 @@ const getSubscribersSuccess = (jsonData) => {
   jsonData.data.forEach((subscriber) => {
     $userList.prepend(
       `
-      <div class="card mb-4 shadow-sm" style="width: 18rem;">
+      <div class="card mb-4 shadow-lg" style="width: 18rem;">
         <div class="card-body">
           <h5 class="card-title">${subscriber.firstName} ${subscriber.lastName}</h5>
-          <h5 class="card-title">Email: ${subscriber.email}</h5>
+          <h5 class="card-title">${subscriber.email}</h5>
           <h6 class="card-subtitle mb-2 text-muted">Regions</h6>
           <p class="card-text">
             <ul>

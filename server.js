@@ -22,10 +22,10 @@ app.get(`/`,(request,response)=>{
   });
 });
 
-// PREFERENCES
-app.get(`/preferences`,(request,response)=>{
+// SIGN UP PAGE
+app.get(`/sign-up`,(request,response)=>{
   // console.log(request);
-  response.sendFile(`views/preferences.html`,{
+  response.sendFile(`views/sign-up.html`,{
     root: __dirname
   });
 });
