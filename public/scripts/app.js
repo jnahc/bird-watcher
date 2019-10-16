@@ -41,7 +41,7 @@ $form.submit(function(event){
  
   
   console.log(subscriberData);
-  // console.log($socialEvent)
+ 
 
   $.ajax({
     method: `POST`,
