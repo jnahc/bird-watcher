@@ -7,18 +7,18 @@ $form.submit(function(event){
   console.log(`submitted`)
   apiUrl = `http://localhost:4000/api/v1/subscribers`
 
-  let $firstName = $(`#first-name`).val();
-  let $lastName = $(`#last-name`).val();
+  let $firstName = $(`#firstname`).val();
+  let $lastName = $(`#lastname`).val();
   let $email = $(`#email`).val();
   let $frequency = $(`#frequency`).val();
   let $socialEvent = $(`#social-event`).is(`:checked`);
   let $academicEvent = $(`#academic-event`).is(`:checked`)
   let $outingsEvent = $(`#outings-event`).is(`:checked`)
-  let $pacificNorthwest = $(`#pacific-northwest`).is(`:checked`)
-  let $californiaSoutwest = $(`#california-southwest`).is(`:checked`)
-  let $midwest = $(`#midwest`).is(`:checked`)
-  let $newEngland = $(`#new-england`).is(`:checked`)
-  let $atlanticCoast = $(`#atlantic-coast`).is(`:checked`)
+  let $pacificNorthwest = $(`#pnw`).is(`:checked`)
+  let $californiaSoutwest = $(`#csw`).is(`:checked`)
+  let $midwest = $(`#m`).is(`:checked`)
+  let $newEngland = $(`#ne`).is(`:checked`)
+  let $atlanticCoast = $(`#a`).is(`:checked`)
 
   let subscriberData = {
     "firstName": `${$firstName}`,

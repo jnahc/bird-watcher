@@ -13,7 +13,7 @@ const SubscriberSchema = new Schema({
   socialEvent: {type: Boolean, default: true}, 
   academicEvent: {type: Boolean, default: true}, 
   outingsEvent: {type: Boolean, default: true}, 
-  frequency: {type:String, required:true},
+  frequency: {type:String, default: "weekly"},
   dateCreated: {
     type: Date,
     default: Date.now,

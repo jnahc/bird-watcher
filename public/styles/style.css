@@ -1,3 +1,159 @@
+/*-------------------------------HOME PAGE--------------------------*/
+img {
+  width: 500px;
+  height: 200px;
+}
+
 body {
-  background: pink;
+  background-color: white;
+}
+
+/*------------------------------- NAVBAR -------------------------*/
+/* General Settings */
+.navbar-nav {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: -0.63%;
+}
+
+/* Navbar Bottom Hover Treatment */
+.navbar-nav :hover {
+  border-bottom: black 1px solid;
+}
+
+/* Navbar Background Color */
+.bg-light {
+  background: #E0E8EC !important;
+}
+
+
+/* -------------------------------FOOTER-----------------------------*/
+/* Footer */
+.footer {
+  background: #E0E8EC !important;
+  padding: 0;
+  margin: 1px;
+}
+
+/* Contact Us Link */
+.contact-us {
+  float: right;
+  cursor: pointer;
+}
+
+/* -----------------------------NEWSLETTER PAGE----------------------------- */
+
+.newsletter {
+font-family: 'Roboto', sans-serif;
+font-size:  18px;              
+vertical-align: top;
+text-align: left;
+margin-left: 18px;
+margin-top: 10px;
+}
+
+/* Text Input Fields */
+#firstname, #lastname, #email{
+  font-family: 'Roboto', sans-serif;
+  width: 339px;
+  height: 30px;
+  font-size: 14px;
+  line-height: 16px;
+  color: rgba (125,125,125, .5);
+  padding: 0 0 0 5px;
+  vertical-align: top;
+  text-align: left;
+}
+
+.btn-secondary {
+  width: 339px;
+  height: 51px; 
+}
+
+/* Frequency Dropdown Title */
+.freq-title{
+  padding: 0 auto;
+}
+
+/* Frequency Dropdown */
+.frequency {
+  margin: 5px 18px;
+  width: 339px;
+  height: 51px;
+  background: white;
+  color: black;
+  border-radius: 9px;
+  text-align: left;
+}
+
+/* Frequency Dropdown Post Select*/
+.frequency :after {
+  background: green;
+}
+
+
+
+/* Submit Button */
+.newsbut {
+position: absolute;
+width: 339px;
+height: 51px;
+background: #607D89;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 9px;
+margin: 5px 18px;
+}
+
+/* Regions Section Title */
+.regions-title {
+  margin-top: 20px auto;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  letter-spacing: -.63%;
+  border: solid 18px #E0E8EC;
+  line-height: 16px;
+  text-align: left;
+  padding: 5px;
+}
+
+/* Regions */
+.regions-list {
+  /* margin-top: 33px; */
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  font-style: light;
+  letter-spacing: -.63%;
+  /* border: solid 18px #E0E8EC; */
+  line-height: 16px;
+  text-align: left;
+  padding-left: 5px;
+  list-style: none;
+}     
+
+/* Regions Checkboxes */
+#pnw, #csw, #ne, #m, #a{
+  float: right;
+  margin-right: 10px;
+}
+
+.regionsection {
+  padding: 5px;
+}
+
+
+/* ------------------------------CONFIRMATION MODAL-------------------------------- */
+.conf-larg {
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  font-style: medium;
+}
+
+/* Modal Guts */
+.modal-content {
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  letter-spacing: -.63%;
+  border: solid 18px #E0E8EC;
+  line-height: 1.4em;
 }

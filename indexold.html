@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel=“stylesheet” href=“https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css” integrity=“sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T” crossorigin=“anonymous”>
+  <link rel="stylesheet" href="/styles/style.css">
+  <title>Bird Watchers Homepage</title>
+</head>
+<body>
+  <main>
+    <h1>Bird Watchers Homepage</h1>
+  </main>
+  <p class="newsletter">Newsletter Preferences</p>
+  <div class="container mt-5">
+  <form id="newContactForm">
+      <form>
+      <!-- action = submission route
+      method = how we want to submit our request
+      in the browser, forms only have GET and POST methods -->
+  <div class="mb-4 first">
+      <label for="firstname">First Name</label>  
+      <input class="form-control form-control-lg" type="text" id="firstname" name="name" placeholder ="First name" minlength="2"/>
+          </div>
+  <div class="mb-4 last">
+      <label for="lastname">Last Name</label>  
+      <input class="form-control form-control-lg" type="text" id="lastname" name="name" placeholder="Last name" minlength="2"/>
+          </div>
+  <div class="mb-4 email"></div>
+       <label for="email">Email</label>
+      <input class="form-control form-control-lg" type="email" id="email" name="email" placeholder="Email" required/>
+          </div>
+
+<div class = "regionssection">
+  Regions I am interested in:
+<ul class = "regions-list">
+  <li>Pacific Northwest   <input type="checkbox" name="PNW" id="pnw" value="???"></li>
+  <li>California-Southwest    <input type="checkbox" name="CSW" id="csw" value="???"></li>
+  <li>Midwest             <input type="checkbox" name="M" id="m" value="???"></li>
+  <li>New England         <input type="checkbox" name="NE" id="ne" value="???"></li>
+  <li>Atlantic            <div class="input-group">
+          <div class="input-group-prepend">
+            <div class="input-group-text">
+              <input type="checkbox" aria-label="Checkbox for following text input">
+            </div>
+          </div>
+      </li>
+       </ul>
+
+
+   
+
+
+  
+  <script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+  <script src="/scripts/app.js"></script>
+</body>
+</html>

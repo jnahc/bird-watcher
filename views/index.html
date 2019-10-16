@@ -1,117 +1,150 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel=“stylesheet” href=“https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css” integrity=“sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T” crossorigin=“anonymous”>
-  <link rel="stylesheet" href="/styles/style.css">
-  <title>Bird Watchers Homepage</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   
+        <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- <link href="sticky-footer.css" rel="stylesheet"> -->
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="styles/style.css">
+    <title>Newsletter</title>
 </head>
+<!--------------------------------NAVBAR---------------------------->
+<nav class="navbar navbar-expand-sm navbar-light bg-light">
+    <a class="navbar-brand" href="#">Extinct Birds</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/sightings">Sightings</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/post">Post Event</a>
+        </li>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/newsletter">Newsletter</a>
+        </li>
+        <!-- <li class="nav-item">
+          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+        </li> -->
+      </ul>
+    </div>
+  </nav>
+
+  <!-- NAVBAR -->
+
 <body>
-  <main>
-    <h1>Bird Watchers Homepage</h1>
-  </main>
+<p class="newsletter">Newsletter Preferences</p>
+<div class="container mt-5">
+  <form id="newContactForm">
+    <!-- action = submission route
+    method = how we want to submit our request
+    in the browser, forms only have GET and POST methods -->
+  <div class="mb-4 first">
+    <label for="firstname">First Name</label>  
+    <input class="form-control form-control-lg" type="text" id="firstname" name="name" placeholder ="First name" minlength="2"/>
+  </div>
+  <div class="mb-4 last">
+    <label for="lastname">Last Name</label>  
+    <input class="form-control form-control-lg" type="text" id="lastname" name="name" placeholder="Last name" minlength="2"/>
+  </div>
+  <div class="mb-4 email">
+      <label for="email">Email</label>
+    <input class="form-control form-control-lg" type="email" id="email" name="email" placeholder="Email" required/>
+  </div>
+  <div class ="mb-4 regions-title">
+    Regions I am interested in:
+    <ul class = "regions-list">
+      <li>Pacific Northwest   
+        <input type="checkbox" name="PNW" id="pnw" value="???">
+      </li>
+      <li>California-Southwest    
+        <input type="checkbox" name="CSW" id="csw" value="???">
+      </li>
+      <li>Midwest             
+        <input type="checkbox" name="M" id="m" value="???">
+      </li>
+      <li>New England         
+        <input type="checkbox" name="NE" id="ne" value="???">
+      </li>
+      <li>Atlantic         
+        <input type="checkbox" name="NE" id="a" value="???">          
+      </li>
 
-  <!-- TEST FORM -->
-
-  <div class="container">
-    <div class="col-md-8 order-md-1">
-        <form>
-            <!-- NAME -->
-            <div class="form-group">
-                <label for="exampleFormControlTextarea1">First Name</label>
-                <textarea class="form-control" id="first-name" rows="1"></textarea>
-              </div>
-              <div class="form-group">
-                  <label for="exampleFormControlTextarea1">Last Name</label>
-                  <textarea class="form-control" id="last-name" rows="1"></textarea>
-                </div>
-            <!-- EMAIL -->
-            <div class="form-group">
-              <label for="exampleInputEmail1">Email address</label>
-              <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email">
-              <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-            </div>
-            <!-- FREQUENCY -->
-            <div class="form-group">
-              <label for="exampleFormControlSelect1">frequency</label>
-              <select class="form-control" id="frequency">
-                <option>Monthly</option>
-                <option>Weekly</option>
-                <option>Daily</option>
-              </select>
-            </div>
-            <!-- EVENTS -->
-            <div class="form-group">
-                <div class="form-check">
-                  <input class="form-check-input" type="checkbox" value="" id="social-event">
-                  <label class="form-check-label" for="defaultCheck1">
-                    Social Event
-                  </label>
-                </div>
-                <div class="form-check">
-                  <input class="form-check-input" type="checkbox" value="" id="academic-event">
-                  <label class="form-check-label" for="defaultCheck1">
-                    Academic Event
-                  </label>
-                </div>
-                <div class="form-check">
-                  <input class="form-check-input" type="checkbox" value="" id="outings-event">
-                  <label class="form-check-label" for="defaultCheck1">
-                    Outings
-                  </label>
-                </div>
-            </div>
-            <!-- LOCATIONS -->
-            <div class="form-group">
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="pacific-northwest">
-                    <label class="form-check-label" for="defaultCheck1">
-                      PNW
-                    </label>
-                  </div>
-                  <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="california-southwest">
-                    <label class="form-check-label" for="defaultCheck1">
-                      CSW
-                    </label>
-                  </div>
-                  <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="midwest">
-                    <label class="form-check-label" for="defaultCheck1">
-                      MW
-                    </label>
-                  </div>
-                  <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="new-england">
-                    <label class="form-check-label" for="defaultCheck1">
-                      NE
-                    </label>
-                  </div>
-                  <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="atlantic-coast">
-                    <label class="form-check-label" for="defaultCheck1">
-                      AC
-                    </label>
-                  </div>
-            </div>       
-          <button type="submit" class="btn btn-primary">Submit</button>
-        </form>
+      </ul>
+  <p class="freq-title"></p>
+  <!-------------------------FREQUENCY DROPDOWN -------------------------->
+  <div class="form-group">
+    <label for="exampleFormControlSelect1">Frequency of My Newsletter</label>
+    <select class="form-control" id="frequency">
+      <option>Monthly</option>
+      <option>Weekly</option>
+      <option>Daily</option>
+    </select>
+  </div>
+  </div>
+  <input class="btn btn-primary newsbut" type='submit' value="Sign Up" data-toggle="modal" data-target="#exampleModalCenter">
+  </form>
+</div>
+  
+<!------------------------------ Modal-------------------------------->
+  <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header"> 
+          <h5 class="modal-title" id="exampleModalCenterTitle">Thank you for signing up for our newsletter!</h5> 
+           <button type="button" class="close" data-dismiss="modal" aria-label="Close"> 
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <span class = "confLrg"> We look forward to keeping you abreast as news flies in!</span>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+        </div>
+      </div>
     </div>
   </div>
 
+<!-- TEMPORARY Button trigger modal -->
+<!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter"></button> -->
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 
+<!---------------- FOOTER --------------------------------->
+      
+      <footer class="footer mt-auto py-3">
+            <div class="container">
+              <p class="text-muted">&copy Extinct Bird Watching 2019.<span class="contact-us"><a href="#">Contact Us</a></span></p>
+            </div>
+          </footer>
+      
+   <!-- SCRIPTS -->
   
-  <script
-  src="https://code.jquery.com/jquery-3.4.1.min.js"
-  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-  crossorigin="anonymous"></script>
+<script
+src="https://code.jquery.com/jquery-3.4.1.min.js"
+integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+crossorigin="anonymous"></script>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script src="/scripts/app.js"></script>  
 
-  <script src="/scripts/app.js"></script>
 </body>
 </html>
