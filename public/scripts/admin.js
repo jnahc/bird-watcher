@@ -12,18 +12,31 @@ const getSubscribersSuccess = (jsonData) => {
   jsonData.data.forEach((subscriber) => {
     $userList.prepend(`
     <div id="${subscriber._id}">
-      <h4>${subscriber.firstName}</h4>
-      <h4>${subscriber.lastName}</h4>
-      <p>Regions are ${subscriber.region} <br> email is ${subscriber.email}</p>
+      <h4>User ID: ${subscriber._id}"</h4>
+      <h4>Full Name: ${subscriber.firstName} ${subscriber.lastName}</h4>
+      <h4>Email: ${subscriber.email}</h4>
+      <p>Email Frequency: ${subscriber.frequency}</p>
+      <p>Locations Subscribed:
+      <ul>
+      <li>Pacific Northwest Region: ${subscriber.pNWRegion}</li>
+      <li>California Southwest Region: ${subscriber.cSWRegion}</li>
+      <li>Midwest Region: ${subscriber.MWRegion}</li>
+      <li>New England Region: ${subscriber.nERegion}</li>
+      <li>Atlantic Coast Region: ${subscriber.aCRegion}</li>
+      </ul>
+      <p>Event Types Subscribed:
+      <ul>
+      <li>Social Events: ${subscriber.socialEvent}</li>
+      <li>Academic Events: ${subscriber.academicEvent}</li>
+      <li>Outings: ${subscriber.outingsEvent}</li>
+      </ul>
+      </p>
       
     </div>
     `);
   })
 }
-    // $(students.hobbies.map)((hobby) =>{
-    // 
-    
-    // }).join("") get rid of commas
+
 
 const handleError = (error) => {
   console.log(error);
